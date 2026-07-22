@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Settings</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <button id="backBtn" class="icon-btn" aria-label="Back">←</button>
+      <h1>Settings</h1>
+      <div style="width:2.2rem"></div>
+    </header>
+
+    <main class="main settings-main">
+
+      <section class="setting-group">
+        <h2>Frame rate</h2>
+        <div class="chip-row" id="fpsRow">
+          <button class="chip" data-fps="15">15 fps</button>
+          <button class="chip" data-fps="30">30 fps</button>
+          <button class="chip" data-fps="60">60 fps</button>
+        </div>
+        <p class="setting-desc">Higher fps = smoother video, larger file size.</p>
+      </section>
+
+      <section class="setting-group">
+        <h2>Video quality</h2>
+        <div class="chip-row" id="qualityRow">
+          <button class="chip" data-quality="low">Low</button>
+          <button class="chip" data-quality="medium">Medium</button>
+          <button class="chip" data-quality="high">High</button>
+        </div>
+      </section>
+
+      <section class="setting-group">
+        <h2>Storage location</h2>
+        <div class="chip-row" id="storageRow">
+          <button class="chip" data-storage="default">Movies/ScreenRecorder</button>
+          <button class="chip" data-storage="custom">Choose folder…</button>
+        </div>
+        <p id="storagePath" class="setting-desc"></p>
+      </section>
+
+      <section class="setting-group">
+        <h2>Theme</h2>
+        <div class="chip-row" id="themeRow">
+          <button class="chip" data-theme="system">System</button>
+          <button class="chip" data-theme="light">Light</button>
+          <button class="chip" data-theme="dark">Dark</button>
+        </div>
+      </section>
+
+      <section class="setting-group">
+        <h2>Recording</h2>
+        <label class="toggle-row">
+          <span>Record microphone audio</span>
+          <input type="checkbox" id="micToggle" />
+        </label>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="js/settings.js"></script>
+</body>
+</html>

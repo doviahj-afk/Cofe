@@ -1,0 +1,17 @@
+{
+  "name": "screen-recorder-a15",
+  "version": "1.0.0",
+  "description": "Screen recorder for Samsung Galaxy A15 with Quick Settings tile, FPS/storage/theme settings",
+  "scripts": {
+    "sync": "cap sync android",
+    "open": "cap open android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.1.2",
+    "@capacitor/core": "^6.1.2",
+    "@capacitor/preferences": "^6.0.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.1.2"
+  }
+}

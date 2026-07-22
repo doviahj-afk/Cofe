@@ -1,0 +1,35 @@
+<!--
+  These are injected automatically into android/app/src/main/AndroidManifest.xml
+  by scripts/patch-android.js during the GitHub Actions build. Kept here for
+  reference / manual editing if you ever build outside CI.
+-->
+
+<!-- Permissions (place as direct children of <manifest>) -->
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" />
+<uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+<uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+<!-- Components (place as direct children of <application>) -->
+<service
+    android:name="com.joshua.screenrecorder.RecordingService"
+    android:foregroundServiceType="mediaProjection"
+    android:exported="false" />
+
+<service
+    android:name="com.joshua.screenrecorder.RecordingTileService"
+    android:exported="true"
+    android:icon="@android:drawable/presence_video_online"
+    android:label="Screen Recorder"
+    android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+    <intent-filter>
+        <action android:name="android.service.quicksettings.action.QS_TILE" />
+    </intent-filter>
+</service>
+
+<activity
+    android:name="com.joshua.screenrecorder.CaptureConsentActivity"
+    android:exported="false"
+    android:theme="@style/Theme.Transparent"
+    android:excludeFromRecents="true"
+    android:taskAffinity="" />

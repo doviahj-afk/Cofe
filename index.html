@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Screen Recorder</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <h1>Screen Recorder</h1>
+      <button id="settingsBtn" class="icon-btn" aria-label="Settings">⚙</button>
+    </header>
+
+    <main class="main">
+      <div class="status-card">
+        <div id="statusDot" class="status-dot idle"></div>
+        <div id="statusText" class="status-text">Idle</div>
+        <div id="timer" class="timer">00:00:00</div>
+      </div>
+
+      <button id="recordBtn" class="record-btn">
+        <span id="recordBtnLabel">Start Recording</span>
+      </button>
+
+      <p class="hint">
+        Tip: after you start a recording once, a <strong>Screen Recorder</strong>
+        tile becomes available in your Quick Settings panel (swipe down twice,
+        tap the pencil/edit icon, drag the tile up). Use it to start/stop
+        recording without opening the app.
+      </p>
+
+      <div id="lastFile" class="last-file"></div>
+    </main>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
